@@ -1,20 +1,3 @@
-/*  ----------------------------------------------------------------------------------------------------------------/                                                                                                               
-/   Problem: Check if given brackets within given expression are all closed properly                                /
-/                                                                                                                   /
-/   Solution: Iterate through each character in expression and check if the character is an open bracket. If so,    /
-/             add character to stack. If the character is a closed bracket, pop last character off stack to check   /
-/             if the brackets match.                                                                                / 
-/                                                                                                                   /
-/   Test Case 1: {[[()[[({}{})]]]]}                                                                                 /
-/   Returns: true                                                                                                   /
-/                                                                                                                   /
-/   Test Case 2: {[}]                                                                                               /
-/   Returns: false                                                                                                  /
-/                                                                                                                   /
-/   Test Case 3: {                                                                                                  /
-/   Returns: false                                                                                                  /
-/   ---------------------------------------------------------------------------------------------------------------*/
-
 import java.io.*;
 import java.util.*;
 import java.text.*;
@@ -22,6 +5,22 @@ import java.math.*;
 import java.util.regex.*;
 
 public class Solution {
+    /* 
+    /   Problem: Check if given brackets within given expression are all closed properly
+    /   
+    /   Solution: Iterate through each character in expression and check if the character is an open bracket. If so,
+    /             add character to stack. If the character is a closed bracket, pop last character off stack to check
+    /             if the brackets match. 
+    /
+    /   Test Case 1: {[[()[[({}{})]]]]}
+    /   Returns: true
+    /
+    /   Test Case 2: {[}]
+    /   Returns: false
+    / 
+    /   Test Case 3: {
+    /   Returns: false  
+    */
     
     public static char[][] TOKENS = {{'{', '}'}, {'(', ')'}, {'[', ']'}};
      

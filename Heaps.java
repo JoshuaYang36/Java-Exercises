@@ -1,17 +1,17 @@
-/*  ------------------------------------------------------------------------------------------------/
-/   PROBLEM: Given an input stream of integers, return the median of the running list of integers.  /
-/                                                                                                   /
-/   SOLUTION: Used a balanced MinHeap and MaxHeap to keep track of the median.                      /   
-/                                                                                                   /
-/   Test Case 1: Input: 489920485                                                                   /
-/   Return: 2                                                                                       /
-/                                                                                                   /
-/   Test Case 2: 223940                                                                             /   
-/   Return: 6                                                                                       /
-/                                                                                                   /
-/   Test Case 3: 4                                                                                  /
-/   Return: 4                                                                                       /
-/   -----------------------------------------------------------------------------------------------*/                               
+/*
+/   PROBLEM: Given an input stream of integers, return the median of the running list of integers.
+/   
+/   SOLUTION: Used a balanced MinHeap and MaxHeap to keep track of the median. 
+/   
+/   Test Case 1: Input: 489920485
+/   Return: 2
+/   
+/   Test Case 2: 223940
+/   Return: 6
+/
+/   Test Case 3: 4
+/   Return: 4
+*/
 
 
 
