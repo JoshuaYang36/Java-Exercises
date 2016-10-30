@@ -1,5 +1,5 @@
 # Java-Exercises
-My Daily Java 8 Exercises
+My Java Exercises
 
 Sources: 
 
@@ -8,4 +8,6 @@ Sources:
 2) HackerRank.com
 
 3) Amazon Web Services for Dummies
+
+4) Leetcode.com
 
