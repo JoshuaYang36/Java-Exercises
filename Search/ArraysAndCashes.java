@@ -65,6 +65,7 @@ public class Solution {
             rightCache[i] = rightCache[i + 1] + arrayOfNumbers[i];
         }    
          
+        // Check if left cached sum equals right cached sum. 
         for(int h = 1; h < length - 1; h++){
             if(leftCache[h - 1] == rightCache[h + 1]){
                 System.out.println("YES");
