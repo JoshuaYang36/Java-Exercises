@@ -1,0 +1,36 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+import java.util.Map.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        int len = in.nextInt();
+        String s = in.next();
+        removeDuplicate(s, len);
+    }
+    public static void removeDuplicate(String s, int len){
+        
+        Map<Character, Integer> count = new HashMap<Character, Integer>();
+        int max = 0;
+        
+        for(int i = 0; i < len; i++){
+            if(count.containsKey(s.charAt(i))){
+                count.put(s.charAt(i), count.get(s.charAt(i)) + 1);
+            }else{
+                count.put(s.charAt(i), 1);
+            }
+        }
+        for (Map.Entry<Character, Integer> entry : count.entrySet()){
+            if(entry.getValue() > max){
+                max = entry.getValue();
+             }
+        }
+        System.out.println(len - max);              
+        return;          
+    }
+}
