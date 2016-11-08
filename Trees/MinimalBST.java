@@ -1,5 +1,5 @@
 /*  ----------------------------------------------------------------------------------------------------------------/                                                                                                               
-/   Problem: Print all left nodes from bottom up, followed by all right node from top down                          /
+/   Problem: Given a sorted array of integers, create a BST with minimal height			                            /
 /                                                                                                                   /
 /   Node is defined as:                                                                                               /
 /           class Node {                                                                                            /
@@ -9,31 +9,20 @@
 /           }                                                                                                       /
 /   ---------------------------------------------------------------------------------------------------------------*/
 
-void top_view(Node root)
-{
-
-    if(root != null) {
-
-        top_view(root.left, true);
-
-        System.out.print(root.data + " ");
-
-        top_view(root.right, false);
-
-    }
-
+// Create a BST with minimal height
+public TreeNode createMinimalBST(int[] array){
+	return createMinimalBST(array, 0, array.length - 1);
 }
 
-void top_view(Node node, boolean goLeft) {
+public TreeNode createMinimalBST(int[] array, start, end){
+	if(end < start){
+		return null;
+	}
 
-    if(node != null) {
-        if(goLeft) {
-            top_view(node.left, goLeft);
-            System.out.print(node.data + " ");
-        } else {
-            System.out.print(node.data + " ");
-            top_view(node.right, goLeft);
-        }
-    } 
+	int mid = (end - start)/2;
+	TreeNode n = array[mid];
+	n.left = createMinimalBST(array, start, mid - 1);
+	n.right = createMinimalBST(array, mid + 1, end);
 
+	return n;
 }
