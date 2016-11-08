@@ -19,8 +19,8 @@ public TreeNode createMinimalBST(int[] array, start, end){
 		return null;
 	}
 
-	int mid = (end - start)/2;
-	TreeNode n = array[mid];
+	int mid = (end + start)/2;
+	TreeNode n = new TreeNode(array[mid]);
 	n.left = createMinimalBST(array, start, mid - 1);
 	n.right = createMinimalBST(array, mid + 1, end);
 
