@@ -31,24 +31,3 @@ public class Solution {
     }
 }
 
-public class Solution {
-    public boolean isHappy(int n) {
-        int output = 0;
-        int lastDigit;
-        while(n > 9){
-            lastDigit = n % 10;
-            n = n/10;
-            output = output + (lastDigit * lastDigit);
-        }
-        output = output + (n * n);
-        
-        if(output == 1){
-           
-            return true;
-        }
-        else{
-            isHappy(output);
-        }
-        return false;
-    }
-}
