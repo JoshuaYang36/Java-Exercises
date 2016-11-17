@@ -23,11 +23,4 @@ public class Solution {
         if(output == 1){
            
             return true;
-        }
-        else{
-            isHappy(output);
-        }
-        return false;
-    }
-}
 
