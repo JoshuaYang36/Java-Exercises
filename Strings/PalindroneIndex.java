@@ -1,17 +1,18 @@
 /*  ----------------------------------------------------------------------------------------------------------------/                                                                                                               
-/   Problem: Given two strings, write a function to check if they are one or less edits apart                       /
+/   Problem: Given a string, return the index of the character, which if removed, will leave a palindrone. Return   /
+/            -1 if the string is already a palindrone.                                                              /
 /                                                                                                                   /
-/   Solution: First, check if the difference in length is at most 1. If not, return false. Next check if we are     /       
-/             inserting/removing a character or just replacing one.                                                 /      
+/   Solution: Iteration the given string from both sides, checking if each character is the same. If so move on to  /      
+/             next character. Else, check if it is right or left charcter that needs to be removed. Return index    /
 /                                                                                                                   /                                                                                         
-/   Test Case 1: Pale, Bale                                                                                         /
-/   Returns: true                                                                                                   /
+/   Test Case 1: abab                                                                                               /
+/   Returns: 0                                                                                                      /
 /                                                                                                                   /
-/   Test Case 2: Mail, Mil                                                                                          /
-/   Returns: true                                                                                                   /
+/   Test Case 2: bbba                                                                                               /
+/   Returns: 3                                                                                                      /
 /                                                                                                                   /
-/   Test Case 3: Rake, Tape                                                                                         /
-/   Returns: false                                                                                                  /
+/   Test Case 3: a                                                                                                  /
+/   Returns: -1                                                                                                     /
 /   ---------------------------------------------------------------------------------------------------------------*/
 
 import java.io.*;
