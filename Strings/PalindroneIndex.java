@@ -1,3 +1,19 @@
+/*  ----------------------------------------------------------------------------------------------------------------/                                                                                                               
+/   Problem: Given two strings, write a function to check if they are one or less edits apart                       /
+/                                                                                                                   /
+/   Solution: First, check if the difference in length is at most 1. If not, return false. Next check if we are     /       
+/             inserting/removing a character or just replacing one.                                                 /      
+/                                                                                                                   /                                                                                         
+/   Test Case 1: Pale, Bale                                                                                         /
+/   Returns: true                                                                                                   /
+/                                                                                                                   /
+/   Test Case 2: Mail, Mil                                                                                          /
+/   Returns: true                                                                                                   /
+/                                                                                                                   /
+/   Test Case 3: Rake, Tape                                                                                         /
+/   Returns: false                                                                                                  /
+/   ---------------------------------------------------------------------------------------------------------------*/
+
 import java.io.*;
 import java.util.*;
 
